@@ -1,25 +1,7 @@
-"""Predictions module for SVAE model
-Author: Hikari Sorensen - Vector Engineering Team (hsorense@broadinstitute.org)
-Notes: 
-"""
-
 import pandas as pd
 import tensorflow as tf
 
 mse = tf.keras.losses.MeanSquaredError()
-
-""" 
-# -- predict --
-Description: given a trained (supervised) VAE model and (one-hot encoded) inputs X, encodes X
-into latent representation (z0, z1, ...) and makes regressor label predictions y_pred.
-If true labels Y (optional argument) are specified, predictions are checked against Y
-and the mean squared error (MSE) of predictions against true label is printed out.
-Outputs a dataframe containing latent encodings, predicted labels, and true label values
-if specified. Can optionally specify list of variants AA, in amino acid string form, as
-an index for dataframe. Optionally writes this dataframe to file if a full output path
-is specified. 
-"""
-
 
 def predict(model, X,array,  Y=None, AA=None,outpath=None):
 
