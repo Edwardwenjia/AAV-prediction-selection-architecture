@@ -1,9 +1,3 @@
-"""SVAE model
-Author: Hikari Sorensen - Vector Engineering Team (hsorense@broadinstitute.org)
-Notes: 
-- this model uses TensorFlow's functional API
-"""
-
 import tensorflow as tf
 from tensorflow.keras import backend as K
 from tensorflow.keras.layers import Input, Dense
