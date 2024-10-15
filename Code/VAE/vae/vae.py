@@ -7,9 +7,6 @@ from tensorflow.keras.models import Model
 ELU = tf.nn.elu
 
 
-# -- reparam_trick -- 
-# see Kingma DP, Salimans T and Welling M. 2015. Variational Dropout and the Local Reparameterization Trick. Advances in Neural Information Processing Systems. https://proceedings.neurips.cc/paper/2015/file/bc7316929fe1545bf0b98d114ee3ecb8-Paper.pdf
-
 def reparam_trick(z_mean, z_log_var):
     batch = tf.shape(z_mean)[0]
     dim = tf.shape(z_mean)[1]
