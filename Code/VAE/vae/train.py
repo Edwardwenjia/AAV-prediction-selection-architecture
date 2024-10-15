@@ -1,8 +1,3 @@
-"""Training module for SVAE model
-Author: Hikari Sorensen - Vector Engineering Team (hsorense@broadinstitute.org)
-Notes: 
-"""
-
 import os, re
 import numpy as np
 import pandas as pd
