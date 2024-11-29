@@ -1,6 +1,5 @@
-# Comprehensive Machine Learning Library to Predict High-yield AAV Variants
-This repository is the official implementation for the paper: [Comprehensive Machine Learning Library to Predict High-yield AAV Variants]. This library is used for AAV virus packaging and sequencing to collect training data for ML. We compared several machine learning and Statistical algorithms. Through iterative learning and continuous optimization, we successfully developed a robust and dependable prediction model.
-
+# Comprehensive Machine Learning Library for Predicting High-Yield AAV Variants
+This repository serves as the official implementation accompanying the paper titled "Comprehensive Machine Learning Library for Predicting High-Yield AAV Variants". The library is designed to facilitate the prediction of high-yield Adeno-Associated Virus (AAV) variants, which are crucial for gene therapy applications. By integrating advanced machine learning techniques with viral packaging and sequencing data, we have developed a robust and reliable predictive model.
 
 
 ## Usage 
