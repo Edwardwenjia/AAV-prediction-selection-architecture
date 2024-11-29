@@ -20,7 +20,20 @@ pip install numpy==1.23.5
 ```
 
 ### 2. Available Data 
-The data can be obtained and downloaded from [Google Drive](https://drive.google.com/drive/folders/1JE7GwDmfb9-lCQDJGC2A5rHZEM18RaxU?usp=sharing), and makedir path ```/data``` and put dataset in ```/data```. 
+The data can be obtained and downloaded from [Google Drive](https://drive.google.com/drive/folders/1JE7GwDmfb9-lCQDJGC2A5rHZEM18RaxU?usp=sharing), and makedir path ```/data``` and put dataset in ```/data```.  For example, data ```1st_780w_packseq_aa.tsv``` as
+
+```
+seq	aa	nor_package
+AAAAAATTCCACTTCTTTTGG	KKFHFFW	-5.10148
+AAAAACATATTCCTCCTTTGG	KNIFLLW	-5.12166
+AAAAACATCTTAATATCTTGG	KNILISW	-3.43716
+AAAAAGAATGATAAGTGTAAG	KKNDKCK	-0.176803
+AAAAAGCGGTGTGCGTTTATG	KKRCAFM	-3.73833
+AAAAAGGGGAGGGCTAGGAAT	KKGRARN	-5.27366
+AAAAAGGTTATGGGGGGGGTT	KKVMGGV	-4.32097
+```
+
+
 
 
 ### 3. Code Structure  
