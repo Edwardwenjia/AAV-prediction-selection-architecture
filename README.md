@@ -3,7 +3,7 @@ This repository serves as the official implementation accompanying the paper tit
 
 
 <p align="center">
-<img src="./figures/framework.png" height = "360" alt="" align=center />
+<img src="framework.png" height = "360" alt="" align=center />
 </p>
 
 
