@@ -71,13 +71,21 @@ This Repo trains and evaluates the model. We provide jupyter notebooks for code 
 │   ├── 2nd_seq_nor_package.ipynb
 │   └── utils_f4f.py
 |
-├── Transformer
-│   ├── Model.py
-│   ├── Train-K-Fold.py
-│   ├── Train-K-KL.py
-│   ├── Transformer_aa_nor_package.ipynb
-│   └── generater.py
-│   └── utils_f4f.py
+├── Large Language Model
+│   ├── model
+│   │   ├── BERT.py
+│   │   ├── CTRL.py
+│   │   ├── GPT.py
+│   │   ├── Inception.py
+│   │   ├── LLAMA.py
+│   │   ├── ResNet.py
+│   │   ├── Transformer.py
+│   │   └── U_Net.py
+│   ├── model
+│   │   ├── BERT.py
+│   │   ├── CTRL.py
+│   │   └── utils_f4f.py
+│   └── run_main.py 
 |
 ├── VAE
 │   ├── 1st_aa_nor_package.ipynb
