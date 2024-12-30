@@ -8,7 +8,7 @@ from utils.processing import load_and_preprocess_data, encode_features, define_m
 
 
 def configure_plotting():
-    """配置绘图参数"""
+    """Configuring Drawing Parameters"""
     mpl.rcParams['svg.fonttype']  =  'none'
     mpl.rcParams['font.family']  =  ['sans-serif']
     mpl.rcParams['font.sans-serif']  =  ['Arial']
@@ -16,32 +16,32 @@ def configure_plotting():
     mpl.rcParams['pdf.fonttype']  =  42
     mpl.rcParams['ps.fonttype']  =  42
 
-# 定义超参数
+# Define hyperparameters
 FLAGS  =  flags.FLAGS
 
-# 数据路径和保存路径
+# Data path and save path
 flags.DEFINE_string('file_path', '/public/chenjiawen/AAV/AAV_Prediction_Selection_Architecture/data/1st_780w_packseq_aa.tsv', 'Data file path')
 flags.DEFINE_string('save_dir', '/public/chenjiawen/AAV/AAV_Prediction_Selection_Architecture/MP/results/', 'Directory to save results')
 flags.DEFINE_string('model_name', 'GPT', 'Name of the model to use (e.g., Bert,Transformer, GPT, Llama2, etc.)')
 flags.DEFINE_string('htitle', 'seq', 'Name of the table title (e.g., aa:ADKSNJS, seq:YNKKDKLSMLDNKFFIK.)')
 flags.DEFINE_integer('sample_step', 50, 'Number of iterations in training')
 
-# 训练参数
+# Training parameters
 flags.DEFINE_integer('iterations', 200, 'Number of iterations in training')
 flags.DEFINE_integer('batch_size', 64, 'Batch size for training')
 flags.DEFINE_integer('epochs', 40, 'Number of epochs for training')
 flags.DEFINE_float('learning_rate', 0.0005, 'Learning rate for training')
 
 
-# 模型参数
-flags.DEFINE_string('input_shape', '(21,20,1)', 'Input shape of the model (e.g., "aa: (7, 20, 1), seq:(21,20,1)")')  # 将 input_shape 定义为字符串
+# Model parameters
+flags.DEFINE_string('input_shape', '(21,20,1)', 'Input shape of the model (e.g., "aa: (7, 20, 1), seq:(21,20,1)")')  # Define input_shape as a string
 flags.DEFINE_integer('embed_dim', 64, 'Dimension of token embeddings')
 flags.DEFINE_integer('num_layers', 4, 'Number of transformer layers')
 flags.DEFINE_integer('num_heads', 4, 'Number of attention heads')
 flags.DEFINE_integer('hidden_dim', 64, 'Dimension of the feed-forward network hidden layer')
 
 
-# 文件名
+# File name
 flags.DEFINE_string('result_file_name', 'results', 'Name of the result file')
 flags.DEFINE_string('plot_file_name', '1st_nor_package_prediction_correlation_test', 'Name of the correlation plot file')
 flags.DEFINE_string('gm_plot_file_name', '1st_nor_package_prediction_distribution_test', 'Name of the distribution plot file')
@@ -50,7 +50,7 @@ flags.DEFINE_string('gm_plot_file_name', '1st_nor_package_prediction_distributio
 
 
 
-# 主函数，用于调用以上定义的各个模块
+# main function to call each module defined above
 def main_pipeline(file_path, save_dir,htitle,model_name, input_shape, sample_step , embed_dim, num_layers, num_heads, hidden_dim, batch_size, epochs,learning_rate ,result_file_name, plot_file_name, gm_plot_file_name):
     configure_plotting()
     
@@ -91,9 +91,9 @@ def main_pipeline(file_path, save_dir,htitle,model_name, input_shape, sample_ste
 
 
 def parse_input_shape(input_shape_str):
-    """将字符串形式的输入形状解析为元组"""
+    """Parse input shapes as strings into tuples"""
     try:
-        # 使用 eval 解析字符串为元组
+        # Parse strings into tuples using eval
         parsed_shape  =  eval(input_shape_str)
         if not isinstance(parsed_shape, tuple):
             raise ValueError("Input shape must be a tuple.")
@@ -105,13 +105,11 @@ def parse_input_shape(input_shape_str):
 
 
 def main(_):
-    # 从 FLAGS 中读取超参数
-
     input_shape_str  =  FLAGS.input_shape
-    input_shape  =  parse_input_shape(input_shape_str)  # 解析 input_shape
+    input_shape  =  parse_input_shape(input_shape_str) # Parse input_shape
     plot_file_name = f'{FLAGS.plot_file_name}_{FLAGS.htitle}'
     gm_plot_file_name = f'{FLAGS.gm_plot_file_name}_{FLAGS.htitle}'
-    # 调用 main_pipeline 函数
+    # Call the main_pipeline function
     main_pipeline(
         file_path = FLAGS.file_path,
         save_dir = FLAGS.save_dir,
