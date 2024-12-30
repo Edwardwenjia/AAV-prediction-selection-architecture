@@ -118,7 +118,7 @@ This Repo trains and evaluates the model. We provide jupyter notebooks for code 
 
 ## Citation
 
-If you find this repository helpful for AAV, please cite our paper. 
+If you find this repository helpful for predicting high-yield AAV variants, please cite our paper. 
 
 ```
 @article{tanchen2024aav,
