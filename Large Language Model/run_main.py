@@ -20,8 +20,8 @@ def configure_plotting():
 FLAGS  =  flags.FLAGS
 
 # Data path and save path
-flags.DEFINE_string('file_path', '/public/chenjiawen/AAV/AAV_Prediction_Selection_Architecture/data/1st_780w_packseq_aa.tsv', 'Data file path')
-flags.DEFINE_string('save_dir', '/public/chenjiawen/AAV/AAV_Prediction_Selection_Architecture/MP/results/', 'Directory to save results')
+flags.DEFINE_string('file_path', '../data/1st_780w_packseq_aa.tsv', 'Data file path')
+flags.DEFINE_string('save_dir', '../results/', 'Directory to save results')
 flags.DEFINE_string('model_name', 'GPT', 'Name of the model to use (e.g., Bert,Transformer, GPT, Llama2, etc.)')
 flags.DEFINE_string('htitle', 'seq', 'Name of the table title (e.g., aa:ADKSNJS, seq:YNKKDKLSMLDNKFFIK.)')
 flags.DEFINE_integer('sample_step', 50, 'Number of iterations in training')
